@@ -1,15 +1,18 @@
+/// <reference path="./typings/index.d.ts" />
+
 import { Main } from './console';
 
 //let main = new Main();
 
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout
-// });
+process.stdin.setEncoding('utf8');
 
-// rl.question('What do you think of Node.js? ', (answer) => {
-//   // TODO: Log the answer in a database
-//   console.log('Thank you for your valuable feedback:', answer);
+process.stdin.on('readable', () => {
+  var chunk = process.stdin.read();
+  if (chunk !== null) {
+    process.stdout.write(`data: ${chunk}`);
+  }
+});
 
-//   rl.close();
-// });
+process.stdin.on('end', () => {
+  process.stdout.write('end');
+});
