@@ -1,0 +1,3 @@
+const CONNECTED_PIECES_TO_WIN = 4;
+
+export { CONNECTED_PIECES_TO_WIN };

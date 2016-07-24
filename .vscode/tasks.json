@@ -1,0 +1,18 @@
+{
+    "version": "0.1.0",
+    "command": "tsc",
+    "isShellCommand": true,
+    "args": ["--target", "ES5",
+             "--outDir", "js",
+             "--sourceMap",
+             "--watch",
+
+             "constants.ts",
+             "enums.ts",
+             "interfaces.ts", 
+             "classes.ts",
+             "app.ts"],
+
+    "showOutput": "silent",
+    "problemMatcher": "$tsc"
+}
